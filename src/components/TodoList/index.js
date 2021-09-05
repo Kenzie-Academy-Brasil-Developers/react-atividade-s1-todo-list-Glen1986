@@ -1,9 +1,11 @@
-const TodoList = () =>{
+const TodoList = ({list,handleTodo}) =>{
   return(
   <form>
     <ul>
-      <li>TodoList</li>
-      <button>clear</button>
+       {list.map((name, index)=><div key={index} id={index}>{name}
+        <button href="#" onClick = {(e)=>handleTodo(name) } > cleanWork</button>
+        </div>
+        )}
     </ul>
   </form>
   )

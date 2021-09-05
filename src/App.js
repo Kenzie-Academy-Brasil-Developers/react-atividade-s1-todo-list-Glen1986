@@ -2,12 +2,24 @@ import './App.css';
 import Form from './components/Form';
 import TodoList from './components/TodoList';
 import { useState } from 'react';
+//import name from './components/TodoList'
 
 function App() {
-  const[list, setList] = useState([]);
-  const[newTodo, setNewTodo]=useState("");
+  
+const[list, setList] = useState([]);
+const[newTodo, setNewTodo]=useState("");
  
-  return (
+  const addTodo = (newTodo) =>{
+    setList([...list, newTodo])
+    setNewTodo("")
+    console.log(list)
+  }
+
+  const handleTodo =({i})=>{
+    console.log({i})
+   //  i.filter((item) => item !== {name})
+ }
+    return (
     <div className="App">
       <div className="App-header">
         <Form
@@ -15,11 +27,17 @@ function App() {
           setList= {setList}
           newTodo = {newTodo}
           setNewTodo = {setNewTodo}
+          addTodo ={addTodo}
         />
 
         <TodoList
           list = {list}
-        />
+          setList= {setList}
+          newTodo = {newTodo}
+          setNewTodo = {setNewTodo}
+          addTodo ={addTodo}
+          handleTodo = {handleTodo}
+             />
       </div>
     </div>
   );

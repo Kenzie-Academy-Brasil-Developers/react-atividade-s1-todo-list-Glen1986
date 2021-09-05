@@ -1,13 +1,5 @@
-const Form = ({list, setList, newTodo, setNewTodo}) =>{
+const Form = ({list, setList, newTodo, setNewTodo, addTodo}) =>{
 
-  const addTodo = (newTodo) =>{
-    setList([...list, newTodo])
-    setNewTodo("")
-    console.log(list)
-  }
-  const handleTodo =()=>{
-   const lessItem = list.filter((item) => item === selected)
-  }
   return(
   <section>
     <input type="text" 
