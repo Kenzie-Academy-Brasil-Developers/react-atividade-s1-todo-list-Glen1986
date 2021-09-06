@@ -16,7 +16,9 @@ const[newTodo, setNewTodo]=useState("");
   }
 
   const handleTodo =(a)=>{
-    list.filter((item) => item !== a )
+    console.log(list.filter((item )=>item !==a), a)
+    setList( list.filter((item) => item !== a)
+)
  }
     return (
     <div className="App">
