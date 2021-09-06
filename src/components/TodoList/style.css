@@ -1,0 +1,18 @@
+button{
+  height: 3rem;
+  width: 12rem;
+  font-size: 28px;
+  background-color: #338c00;
+  color:#eeff00;
+  border-radius: 0.5rem;
+ }
+ul{
+  width:30rem;
+}
+ul>li{
+  text-align:left;
+}
+ul>li>button{
+  position: relative;
+
+}
